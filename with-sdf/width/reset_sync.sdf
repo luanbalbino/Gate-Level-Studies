@@ -1,0 +1,17 @@
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "reset_sync")
+  (DATE "2025-06-19")
+  (VENDOR "Example")
+  (PROGRAM "Manual")
+  (VERSION "1.0")
+  
+  (CELL
+    (CELLTYPE "reset_sync")
+    (INSTANCE dut)
+
+    (TIMINGCHECK
+      (WIDTH (negedge rst_n) (7))
+    )
+  )
+)

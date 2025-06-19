@@ -1,0 +1,17 @@
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "period_check")
+  (DATE "2025-06-19")
+  (VENDOR "Example")
+  (PROGRAM "Manual")
+  (VERSION "1.0")
+
+  (CELL
+    (CELLTYPE "period_check")
+    (INSTANCE dut)
+
+    (TIMINGCHECK
+      (PERIOD (posedge clk) (9))
+    )
+  )
+)
