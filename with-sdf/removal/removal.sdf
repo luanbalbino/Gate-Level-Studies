@@ -1,0 +1,15 @@
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "removal_check")
+  (DATE "2025-06-19")
+  (VENDOR "Example")
+  (PROGRAM "Manual")
+  (VERSION "1.0")
+  (CELL
+    (CELLTYPE "removal_check")
+    (INSTANCE dut)
+    (TIMINGCHECK
+      (REMOVAL (posedge async) (posedge clk) (5))
+    )
+  )
+)

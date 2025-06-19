@@ -1,0 +1,15 @@
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "recovery_check")
+  (DATE "2025-06-19")
+  (VENDOR "Example")
+  (PROGRAM "Manual")
+  (VERSION "1.0")
+  (CELL
+    (CELLTYPE "recovery_check")
+    (INSTANCE dut)
+    (TIMINGCHECK
+      (RECOVERY (posedge async) (posedge clk) (5))
+    )
+  )
+)

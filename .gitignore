@@ -1,0 +1,10 @@
+*.history
+*.log
+*.vcd
+
+xcelium.d*
+Annotation*
+transcript
+*_info
+_lib*
+_vmake

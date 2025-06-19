@@ -1,0 +1,15 @@
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "skew_check")
+  (DATE "2025-06-19")
+  (VENDOR "Example")
+  (PROGRAM "Manual")
+  (VERSION "1.0")
+  (CELL
+    (CELLTYPE "skew_check")
+    (INSTANCE dut)
+    (TIMINGCHECK
+      (SKEW (posedge clk1) (posedge clk2) (2))
+    )
+  )
+)
