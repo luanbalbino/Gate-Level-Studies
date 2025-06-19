@@ -1,0 +1,17 @@
+(DELAYFILE
+    (SDFVERSION "2.1")
+    (DESIGN "dff")
+    (DATE "2025-06-18")
+    (VENDOR "Example")
+    (PROGRAM "Manual")
+    (VERSION "1.0")
+    
+    (CELL
+        (CELLTYPE "dff")
+        (INSTANCE dff_inst)
+        
+        (TIMINGCHECK
+            (SETUP d (posedge clk) (10))
+        )
+    )
+)
