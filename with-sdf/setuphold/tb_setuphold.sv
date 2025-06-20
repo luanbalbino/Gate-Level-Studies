@@ -12,8 +12,15 @@ module tb;
   // Clock de 10 ps
   always #5 clk = ~clk;
 
+`ifdef SDF_TEST
   initial begin
-    $sdf_annotate("setuphold.sdf", uut);
+      // there's other possibilities of arguments, see the guide
+      $sdf_annotate("setuphold.sdf", uut);
+  end
+`endif
+
+  initial begin
+
     $display("Start setup/hold violation demo");
     $monitor("%0t: clk=%b d=%b q=%b", $time, clk, d, q);
 
