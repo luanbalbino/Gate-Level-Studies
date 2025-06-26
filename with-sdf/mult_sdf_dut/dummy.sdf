@@ -1,0 +1,17 @@
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "dummy")
+  (DATE "Today")
+  (VENDOR "Example")
+  (PROGRAM "none")
+  (VERSION "1.0")
+  (CELL
+    (CELLTYPE "dummy")
+    (INSTANCE dummy_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH d q (2.0:2.0:2.0))
+      )
+    )
+  )
+)
