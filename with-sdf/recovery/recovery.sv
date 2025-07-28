@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module recovery_check (
+module recovery (
   input wire async,
   input wire clk,
   output reg out

@@ -3,10 +3,10 @@ module tb;
   logic async = 0, clk = 0;
   wire out;
 
-  recovery_check dut (.async(async), .clk(clk), .out(out));
+  recovery dut (.async(async), .clk(clk), .out(out));
 
   initial begin
-    $sdf_annotate("recovery_check.sdf", dut);
+    $sdf_annotate("recovery.sdf", dut);
     $display("Start $recovery violation test");
     $monitor("%0t: clk=%b async=%b out=%b", $time, clk, async, out);
 
