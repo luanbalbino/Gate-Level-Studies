@@ -7,7 +7,7 @@ module tb;
   wire q;
 
   // Instância do DUT
-  test_setuphold uut (.clk(clk), .d(d), .q(q));
+  setuphold uut (.clk(clk), .d(d), .q(q));
 
   // Clock de 10 ps
   always #5 clk = ~clk;

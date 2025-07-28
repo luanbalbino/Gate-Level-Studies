@@ -1,6 +1,6 @@
 `timescale 1ps/1ps
 
-module test_setuphold(input wire clk, input wire d, output reg q);
+module setuphold(input wire clk, input wire d, output reg q);
 
   always @(posedge clk)
     q <= d;

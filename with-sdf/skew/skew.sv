@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module skew_check (
+module skew (
   input wire clk1,
   input wire clk2,
   output reg sync

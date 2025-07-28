@@ -1,15 +1,18 @@
 (DELAYFILE
   (SDFVERSION "2.1")
-  (DESIGN "skew")
+  (DESIGN "setuphold")
   (DATE "2025-06-19")
   (VENDOR "Example")
   (PROGRAM "Manual")
   (VERSION "1.0")
+
   (CELL
-    (CELLTYPE "skew")
-    (INSTANCE dut)
+    (CELLTYPE "setuphold")
+    (INSTANCE uut)
+
     (TIMINGCHECK
-      (SKEW (posedge clk1) (posedge clk2) (2))
+      (SETUP d (posedge clk) (5))
+      (HOLD  d (posedge clk) (3))
     )
   )
 )
