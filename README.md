@@ -1,6 +1,9 @@
 # Gate-Level-Studies
 This repository includes examples and tests made during my studies on gate level simulations.
 
+## How to run
+For the most part of examples, just use the makefile `make run TOP=<name_of_folder>`
+
 ## Compilation/Simulation Options and brief description
 
 | Option                    | Description                                                                                 |
