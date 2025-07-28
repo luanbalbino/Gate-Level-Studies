@@ -1,7 +1,7 @@
-// rtl/reset_sync.v
+// rtl/reset.v
 `timescale 1ns/1ps
 
-module reset_sync (
+module width (
     input  wire clk,
     input  wire rst_n,
     output reg  valid

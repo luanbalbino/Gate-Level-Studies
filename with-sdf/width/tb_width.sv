@@ -7,13 +7,13 @@ module tb;
   logic rst_n;
   wire valid;
 
-  reset_sync dut (.clk(clk), .rst_n(rst_n), .valid(valid));
+  width dut (.clk(clk), .rst_n(rst_n), .valid(valid));
 
   // Clock: 10ns
   always #5 clk = ~clk;
 
   initial begin
-    $sdf_annotate("reset_sync.sdf", dut);
+    $sdf_annotate("width.sdf", dut);
     $display("Start test with $width on rst_n");
     $monitor("%0t: rst_n=%b valid=%b", $time, rst_n, valid);
 
