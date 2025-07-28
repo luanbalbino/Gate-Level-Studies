@@ -3,10 +3,10 @@ module tb;
   logic clk = 0, a = 0;
   wire y;
 
-  nochange_check dut (.clk(clk), .a(a), .y(y));
+  nochange dut (.clk(clk), .a(a), .y(y));
 
   initial begin
-    $sdf_annotate("nochange_check.sdf", dut);
+    $sdf_annotate("nochange.sdf", dut);
     $display("Start $nochange violation test");
 
     a = 1;

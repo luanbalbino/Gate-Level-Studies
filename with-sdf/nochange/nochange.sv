@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module nochange_check (
+module nochange (
   input wire a,
   input wire clk,
   output reg y

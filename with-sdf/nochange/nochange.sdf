@@ -1,12 +1,12 @@
 (DELAYFILE
   (SDFVERSION "2.1")
-  (DESIGN "nochange_check")
+  (DESIGN "nochange")
   (DATE "2025-06-19")
   (VENDOR "Example")
   (PROGRAM "Manual")
   (VERSION "1.0")
   (CELL
-    (CELLTYPE "nochange_check")
+    (CELLTYPE "nochange")
     (INSTANCE dut)
     (TIMINGCHECK
       (NOCHANGE (posedge clk) a (3) (3))
