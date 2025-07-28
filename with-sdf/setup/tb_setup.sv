@@ -3,13 +3,13 @@ module tb;
     logic d;
     logic q;
 
-    dff dff_inst (.clk(clk), .d(d), .q(q));
+    setup setup_inst (.clk(clk), .d(d), .q(q));
 
     // Clock period: 10 time units
     always #5 clk = ~clk;
 
     initial begin
-        $sdf_annotate("dff.sdf", dff_inst);
+        $sdf_annotate("setup.sdf", setup_inst);
         $display("Start of setup timing test");
         $display("All the cases will fail");
     

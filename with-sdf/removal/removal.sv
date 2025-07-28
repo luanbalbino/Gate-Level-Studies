@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module removal_check (
+module removal (
   input wire async,
   input wire clk,
   output reg out

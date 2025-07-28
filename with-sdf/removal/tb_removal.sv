@@ -3,10 +3,10 @@ module tb;
   logic async = 0, clk = 0;
   wire out;
 
-  removal_check dut (.async(async), .clk(clk), .out(out));
+  removal dut (.async(async), .clk(clk), .out(out));
 
   initial begin
-    $sdf_annotate("removal_check.sdf", dut);
+    $sdf_annotate("removal.sdf", dut);
     $display("Start $removal violation test");
     $monitor("%0t: clk=%b async=%b out=%b", $time, clk, async, out);
 

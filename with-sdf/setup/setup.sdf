@@ -1,14 +1,14 @@
 (DELAYFILE
     (SDFVERSION "2.1")
-    (DESIGN "dff")
+    (DESIGN "setup")
     (DATE "2025-06-18")
     (VENDOR "Example")
     (PROGRAM "Manual")
     (VERSION "1.0")
     
     (CELL
-        (CELLTYPE "dff")
-        (INSTANCE dff_inst)
+        (CELLTYPE "setup")
+        (INSTANCE setup_inst)
         
         (TIMINGCHECK
             (SETUP d (posedge clk) (10))

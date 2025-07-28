@@ -1,4 +1,4 @@
-module dff (
+module setup (
     input clk,
     input d,
     output logic q
