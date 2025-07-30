@@ -1,0 +1,3 @@
+SDF_FILE="/home/luan.balbino/src/misc/gls/rtl-netlist/sdf/full_adder.sdf",
+SCOPE=tb_full_adder.dut,
+MTM_CONTROL="MAXIMUM";

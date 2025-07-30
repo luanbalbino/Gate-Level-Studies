@@ -1,0 +1,3 @@
+SDF_FILE="/home/luan.balbino/src/misc/gls/rtl-netlist/sdf/alu_register_4bit.sdf",
+SCOPE=tb_alu_register_4bit.dut,
+MTM_CONTROL="MAXIMUM";
