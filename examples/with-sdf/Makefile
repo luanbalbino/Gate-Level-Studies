@@ -32,3 +32,21 @@ clean_all:
 		-name "INCA_libs" -o \
 		-name "xcelium.d" -o \
 		-name ".simvision*" \) -exec rm -rf {} +
+
+help:
+	@echo "Usage:"
+	@echo "  make run TOP=<name_of_folder>      # Run simulation for given folder"
+	@echo "  make wave TOP=<name_of_folder>     # Run simulation with waveform GUI"
+	@echo "  make clean TOP=<name_of_folder>    # Clean simulation files in the folder"
+	@echo "  make clean_all                     # Clean simulation files in all folders"
+	@echo ""
+	@echo "Variables:"
+	@echo "  TOP    : Folder and top module name (default: skew)"
+	@echo "  XRUN_FLAGS : Flags passed to xrun simulator"
+	@echo ""
+	@echo "Dependencies:"
+	@echo "  - Cadence Xcelium (xrun)"
+	@echo "  - Make"
+	@echo ""
+	@echo "Notes:"
+	@echo "  Using xrun by default; you can modify for other simulators if needed."
