@@ -36,6 +36,9 @@ This repository contains RTL, testbenches, netlists, and scripts for study purpo
 
     make run_netlist TOP='<RTL_NAME>' # Compile and simulate gate-level netlist
     make wave_netlist TOP='<RTL_NAME>' # Open gate-level waveform GUI
+  
+    # optional: use MODE=<zero or unit> to force delay mode
+    e.g. make run_netlist MODE=zero
 
     make clean # Clean simulation outputs
     make clean_all  

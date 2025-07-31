@@ -2,7 +2,7 @@
 This repository includes examples and tests made during my studies on gate level simulations.
 
 ## How to run
-For the most part of examples, just use the makefile `make run TOP=<name_of_folder>`
+Each folder contains its own Makefile. Simply use the available targets in each folder to run the examples.
 
 ## Compilation/Simulation Options and brief description
 
@@ -43,6 +43,20 @@ You can compile manually your SDF File with xmsdfc option
 
 ```systemverilog
 $sdf_annotate ("sdf_file", [module_instance], ["config_file"], ["log_file"], ["mtm_spec"], ["scale_factors"],["scale_type"]);
+```
+
+## `-sdf_cmd_file` Usage
+
+To apply delays via SDF in gate-level simulations with Xcelium, its possible to use an SDF command file that defines annotation parameters in a structured way. This file must contain at least one declaration of either SDF_FILE (for standard files) or COMPILED_SDF_FILE (for precompiled files with the .X extension).
+
+``` bash
+# Basic example
+COMPILED_SDF_FILE = "Module.sdf.X",
+SCOPE = Module:i1,
+LOG_FILE = "sdf_name.log",
+MTM_CONTROL = "MINIMUM", # can be Maximum Minimum, or typical
+SCALE_FACTORS = ".201:1.01:3.01",
+SCALE_TYPE = "FROM_MINIMUM";
 ```
 
 ### Parameters
