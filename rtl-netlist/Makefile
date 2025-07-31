@@ -27,14 +27,16 @@ COMMON_FLAGS = -sv -timescale 1ns/1ps -access +rwc -v $(STD_LIB)
 # Gate-level sim flags
 XRUN_FLAGS = $(COMMON_FLAGS) -sdf_cmd_file ./sdf/cmd_files/sdf_cmd_file_${TOP} 
 
+MODE ?= none # can be zero or unit. Default is SDF file
+
 run_synthesis:
 	genus -f $(SYNTH_FILE)
 
 run_netlist:
-	xrun $(XRUN_FLAGS) -top tb_$(TOP) $(SRCS_NETLIST) -svseed $(SEED)
+	xrun $(XRUN_FLAGS) -top tb_$(TOP) $(SRCS_NETLIST) -svseed $(SEED) -delay_mode $(MODE)
 
 wave_netlist:
-	xrun -gui $(XRUN_FLAGS) -top tb_$(TOP) $(SRCS_NETLIST) -svseed $(SEED)
+	xrun -gui $(XRUN_FLAGS) -top tb_$(TOP) $(SRCS_NETLIST) -svseed $(SEED) -delay_mode $(MODE)
 
 run_rtl:
 	xrun $(COMMON_FLAGS) -top tb_$(TOP) $(SRCS_RTL) -svseed $(SEED)
