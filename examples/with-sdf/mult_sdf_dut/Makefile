@@ -8,9 +8,6 @@ SRCS = dummy.sv tb_dummy.sv
 SDF_FILE = dummy.sdf \
 		   second_dummy
 
-# this is an option too (withou annotate)
-# SDF_FILE = dfsf.sdf
-# and include this in XRUN_FLAGS like this: -sdf max:/tb/dff_inst=$(SDF_FILE)
 XRUN_FLAGS = -sv -timescale 1ns/1ps -access +rwc
 DEFINE     = -define SDF_TEST
 
@@ -51,6 +48,7 @@ wave_sdf: clean
 # ============================================================================
 gls:
 	@echo "[INFO] To run GLS, the netlist must be available and SDF properly annotated."
+	@echo "[INFO] You can use GENUS or other tools to generate the netlist and SDF file. For This example, it's not necessary"
 	@echo "[INFO] Update the SRCS list and/or insert the \$sdf_annotate call in your testbench."
 
 clean:
